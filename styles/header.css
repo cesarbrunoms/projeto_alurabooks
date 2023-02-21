@@ -1,0 +1,93 @@
+/* configurações de toda navbar */
+.cabecalho {
+    /* com de fundo do navbar */
+    background-color: var(--branco);
+
+    /* para que os icones fiquem alinhados lado a lado */
+    display: flex;
+
+    /* desta forma as duas divs chamadas container ficam 
+    uma em cada canto da tela*/
+    justify-content: space-between;
+
+    /* alinhar os itens no centro com relação a altura
+    da navbar */
+    align-items: center;
+
+    /* O position relative, ele libera a opção de você botar outros atributos como top, left, right, bottom que em português é topo, lado direito, lado esquerdo, e embaixo. */
+    position: relative;
+}
+
+/* configurações do icone menu hamburguer*/
+.cabecalho__menu-hamburguer {
+    /* largura */
+    width: 24px;
+
+    /* altura */
+    height: 24px;
+
+    /* imagem menu hamburguer */
+    background-image: url("../img/1_navbar/Menu.svg");
+    background-repeat: no-repeat;
+    /* alinhar centro com relação a altura
+    da navbar */
+    background-position: center;
+
+    /* "inline-block" porque ele permite que possamos 
+    definir altura e largura como fizemos logo acima */
+    display: inline-block;
+}
+
+/* configurar lista */
+.lista-menu {
+    /* esconder os itens da lista */
+    display: none;
+
+    /**/
+    top: 100%;
+
+    /* aumenta a largura da lista
+    de acordo com a largura da tela */
+    width: 60vw;
+
+    /* position absolute, ele permite que você movimente o seu elemento de acordo com outro que veio antes, ou que é o pai */
+    position: absolute;
+}
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.container {
+    /* para que os icones fiquem alinhados lado a lado */
+    display: flex;
+
+    /* alinhar os itens no centro com relação a altura
+    da navbar */
+    align-items: center;
+}
+
+/* vamos dar um espaçamento nos icones da navbar,
+foi preciso criar esta classe para todas as imagens */
+.container__imagem {
+    /* unidade de medida "em" somente usada para definir
+    o tamanho de imagens e não caracteres */
+    padding: 1em;
+}
+
+.lista-menu__titulo, .lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+}
+
+.lista-menu__link {    
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* letras maiusculas */
+    text-transform: uppercase;
+}
