@@ -81,6 +81,10 @@ foi preciso criar esta classe para todas as imagens */
 
 .lista-menu__titulo {
     color: var(--laranja);
+
+    /* fonte negrito */
+    font-weight: 700;
+
 }
 
 .lista-menu__link {    
