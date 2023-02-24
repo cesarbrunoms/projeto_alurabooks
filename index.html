@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <!-- arquivo swiperjs.com -->
+    <!-- use swiper from cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <!-- arquivo reset css -->
     <link rel="stylesheet" href="styles/reset.css">
 
@@ -21,7 +25,7 @@
 
 <body>
 
-    <!-- navbar -->
+    <!--########################### fim navbar ###########################-->
     <header class="cabecalho">
 
         <!-- inicio menu hamburguer -->
@@ -63,16 +67,96 @@
             <a href="#"><img src="img/1_navbar/Compras.svg" alt="Carrinho de Compras" class="container__imagem"></a>
             <a href="#"><img src="img/1_navbar/Usuario.svg" alt="Meu Perfil" class="container__imagem"></a>
         </div>
+        <!--########################### fim navbar ###########################-->
 
     </header>
 
-    <!-- banner -->
+    <!--########################### inicio banner ###########################-->
     <section class="banner">
         <h2 class="banner__titulo">Já sabe por onde começar ?</h2>
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
     </section>
-    
+    <!--########################### fim banner ###########################-->
+
+    <!--########################### inicio carrossel ###########################-->
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Ultimos Lançamentos</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/3_carrossel/ApacheKafka.svg"
+                        alt="Livro sobre apache kafka e spring boot da alura books"></div>
+                <div class="swiper-slide"><img src="img/3_carrossel/Liderança.svg"
+                        alt="Livro sobre liderança em design da alura books"></div>
+                <div class="swiper-slide"><img src="img/3_carrossel/Javascript.svg"
+                        alt="Livro sobre javascript assertivo da alura books"></div>
+                <div class="swiper-slide"><img src="img/3_carrossel/Guia Front-end.svg"
+                        alt="Livro guia front-end da alura books"></div>
+                <div class="swiper-slide"><img src="img/3_carrossel/Portugol.svg"
+                        alt="Livro sobre portugol da alura books"></div>
+                <div class="swiper-slide"><img src="img/3_carrossel/Acessibilidade.svg"
+                        alt="Livro sobre acessibilidade na web da alura books"></div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <!--########################### fim carrossel ###########################-->
+
+        <!--######################## inicio card 1 ########################-->
+        <div class="card">
+            <!-- 1º linha -->
+            <div class="card__descricao">
+                <!-- 1º coluna -->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                    <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                    <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                </div>
+                <!-- 2º coluna -->
+                <img src="img/4_card1/Angular.svg" class="descricao__imagem">
+            </div>
+            <!-- 2º linha -->
+            <div class="card__botoes">
+                <!-- 1º coluna -->
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="img/4_card1/Favoritos.svg" alt="Favoritar livro"></li>
+                    <li class="botoes__item"><img src="img/4_card1/Compras.svg" alt="Adicionar no carrinho de compras"></li>
+                </ul>
+                <!-- 2º coluna -->
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+
+            </div>
+        </div>
+        <!--######################## fim card 1 ########################-->
+
+    </section>
+    <!--########################### fim carrossel ###########################-->
+
+
+
+    <!--######################## inicio script carrossel ########################-->
+    <!-- arquivo swiperjs.com -->
+    <!-- use swiper from cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+    <!--######################## fim script carrossel ########################-->
+
 </body>
 
 </html>
