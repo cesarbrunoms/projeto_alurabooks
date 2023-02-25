@@ -8,6 +8,8 @@ Ou seja, agora temos dois arquivos .css: "style" e "header.css"*/
 
 @import url("../styles/carrossel.css");
 
+@import url("../styles/topicos.css");
+
 /* ---------------------- variaveis ---------------------- */
 :root {
     --cor-de-fundo: #EBECEE;
