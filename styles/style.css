@@ -12,6 +12,8 @@ Ou seja, agora temos dois arquivos .css: "style" e "header.css"*/
 
 @import url("../styles/contato.css");
 
+@import url("../styles/rodape.css");
+
 /* ---------------------- variaveis ---------------------- */
 :root {
     --cor-de-fundo: #EBECEE;
